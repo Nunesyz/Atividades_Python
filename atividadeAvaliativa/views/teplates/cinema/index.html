@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Programação</h1>
+
+{% if sessoes %}
+    {% for sessao in sessoes %}
+        <p>{{ sessao.filme.titulo }} — {{ sessao.sala.nome }} — {{ sessao.horario.strftime("%d/%m/%Y %H:%M") }}</p>
+    {% endfor %}
+{% else %}
+    <p>Nenhuma sessão cadastrada.</p>
+{% endif %}
+
+<a href="{{ url_for('cinema.nova_sessao') }}">Nova sessão</a>
+{% endblock %}

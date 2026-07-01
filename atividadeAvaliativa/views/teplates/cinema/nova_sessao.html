@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Nova Sessão</h1>
+
+<form method="POST">
+    <label>Filme</label>
+    <select name="filme_id">
+        {% for filme in filmes %}
+            <option value="{{ filme.id }}">{{ filme.titulo }}</option>
+        {% endfor %}
+    </select>
+
+    <label>Sala</label>
+    <select name="sala_id">
+        {% for sala in salas %}
+            <option value="{{ sala.id }}">{{ sala.nome }}</option>
+        {% endfor %}
+    </select>
+
+    <label>Horário</label>
+    <input type="datetime-local" name="horario" required>
+
+    <button type="submit">Salvar</button>
+</form>
+
+<a href="{{ url_for('cinema.index') }}">Voltar</a>
+{% endblock %}
