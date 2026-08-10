@@ -1,0 +1,51 @@
+.tarefa-pendente {
+    border-left: 5px solid #ffc107;
+    background-color: #fff8e1;
+}
+
+.tarefa-andamento {
+    border-left: 5px solid #0d6efd;
+    background-color: #e7f1ff;
+}
+
+.tarefa-concluida {
+    border-left: 5px solid #198754;
+    background-color: #e9f7ef;
+}
+
+body.modo-escuro {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.modo-escuro .navbar-text {
+    color: #f1f1f1 !important;
+}
+
+body.modo-escuro .card {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.modo-escuro .card-text {
+    color: #cccccc;
+}
+
+body.modo-escuro .tarefa-pendente {
+    background-color: #3a331a;
+}
+
+body.modo-escuro .tarefa-andamento {
+    background-color: #1a2a3a;
+}
+
+body.modo-escuro .tarefa-concluida {
+    background-color: #1a3a24;
+}
+
+body.modo-escuro .form-control,
+body.modo-escuro .form-select {
+    background-color: #2a2a2a;
+    color: #f1f1f1;
+    border-color: #444;
+}
